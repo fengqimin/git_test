@@ -102,15 +102,12 @@ def merge(files_or_dir, output_file):
                 files.append(os.path.join(files_or_dir, path))
     else:
         files = files_or_dir
-
     # 逐个添加pdf
-    for pdf in files:
-        with open(pdf, 'rb') as fr:
-            pdf_merger.append(fr)
+    for pdf_file in files:
+        pdf_merger.append(open(pdf_file, 'rb'))
 
     # 将内存中合并的pdf文件写入
-    with open(output_file, 'wb') as fw:
-        pdf_merger.write(fw)
+    pdf_merger.write(open(output_file, 'wb') )
 
 
 def add_watermark(watermark_file, in_file, output_file):

@@ -1,7 +1,7 @@
 """
 A simple python script to edit pdf files.
 
-@author: QImin Feng
+@author: Qimin Feng
 """
 
 import PyPDF2

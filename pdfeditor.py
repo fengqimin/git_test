@@ -95,7 +95,7 @@ def merge(files_or_dir, output_file):
     pdf_merger = PyPDF2.PdfFileMerger()
     pattern = re.compile(r"(?i)\.pdf$")
 
-    if os.path.isdir(files_or_dir):
+    if not isinstance(files_or_dir,list) and os.path.isdir(files_or_dir):
         files = []
         for path in os.listdir(files_or_dir):
             if pattern.search(path) and not re.search(path, output_file):

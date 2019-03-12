@@ -231,6 +231,4 @@ def cmdline():
 
 
 if __name__ == "__main__":
-    # split(r'D:\My Projects\Python\Application\data\test.pdf', [1, 5, 10])
-    # merge()
     cmdline()
